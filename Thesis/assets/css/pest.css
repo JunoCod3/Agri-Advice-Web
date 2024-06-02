@@ -1,0 +1,1204 @@
+.sidebar1 {
+    text-align: center;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #379237;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+}
+
+/* ==================== Pest and Disease ======================== */
+
+#showFormPests {
+    background-color: rgba(1, 31, 1, 0.932);
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 15px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#showFormDisease {
+    font-weight: 700;
+    font-size: 16px;
+    background-color: rgba(1, 31, 1, 0.932);
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+/* ================== Display Pest and Disease ===================== */
+
+.addPest-Disease {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 20px;
+    background-color: #03441f;
+    display: none;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+#pest-container {
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+#disease-container {
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+/* ================== Add Disease ====================== */
+
+
+.diseaseInfo {
+    text-align: center;
+    margin: 15px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pestInfo {
+    text-align: center;
+    margin: 15px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.addPests {
+    background-color: #03441f;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 5px;
+    position: absolute;
+    justify-self: center;
+    margin-left: 5rem;
+    width: 45rem;
+    display: none;
+}
+
+.addDisease {
+    background-color: #03441f;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 5px;
+    position: absolute;
+    justify-self: center;
+    margin-left: 5rem;
+    width: 45rem;
+    display: none;
+}
+
+.editpesdes {
+    background-color: #03441f;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 5px;
+    height: 625px;
+    overflow-y: scroll;
+    position: absolute;
+    justify-self: center;
+    margin-left: 5rem;
+    width: 45rem;
+    display: none;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.genTitle {
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.gen {
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.iconInfo {
+    text-align: start;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.icon {
+    display: none;
+}
+
+.icon3 {
+    display: none;
+}
+
+
+.icon1 {
+    display: none;
+}
+
+.fileData {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin-left: 11rem;
+    margin-right: 4rem;
+    border-radius: 10px;
+}
+
+.selectIcon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: start;
+    margin-left: 19rem;
+    margin-right: 19rem;
+    border-radius: 5px;
+}
+
+.iconlayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.deselectButton {
+    margin-right: 2rem;
+    margin-top: 5rem;
+    width: 30px;
+    height: 30px;
+}
+
+.iconContainer {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.image {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+/* ============ Exit ======================== */
+.exit {
+    display: flex;
+    justify-content: end;
+    gap: 7px;
+    margin-right: 45px;
+    margin-bottom: 20px;
+}
+
+.uploadAlldata {
+    color: white;
+    font-weight: 700;
+    margin-top: 15px;
+    background-color: green;
+    font-size: 14px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.close {
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 7px;
+    border-radius: 3px;
+    font-weight: 700;
+    color: white;
+    background-color: green;
+}
+
+/* ========================= Display Pests and Disease ================================= */
+
+#detail-pestsDisease {
+    background-color: #D5F5E3;
+    border-radius: 5px;
+    position: absolute;
+    justify-self: center;
+    border: 2px black solid;
+    width: 770px;
+    height: 630px;
+    margin-top: 20px;
+    display: none;
+    overflow-y: scroll;
+}
+
+#xButton {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    position: absolute;
+    justify-self: end;
+    margin-right: 243px;
+    display: none;
+    cursor: pointer;
+}
+
+#detail-display {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    padding-bottom: 20px;
+    gap: 17px 5px;
+}
+
+#detail-disease {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    padding-bottom: 20px;
+    gap: 17px 5px;
+}
+
+.divPests {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid green;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #D5F5E3;
+}
+
+.divPests:hover {
+    transform: scale(1.1);
+}
+
+.icons {
+    width: 150px;
+    height: 90px;
+    border-radius: 5px;
+}
+
+.titles {
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ================= Details Pest and Disease ================================ */
+
+.background {
+    position: absolute;
+    background-color: #D5F5E3;
+    justify-self: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.pestImg {
+    width: 60%;
+    height: 250px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 5px;
+}
+
+#backDisease {
+    height: 15px;
+    width: 15px;
+    margin-left: 378px;
+    cursor: pointer;
+}
+
+.detailDiv1 {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.pestTitle {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dIdentify1 {
+    margin-top: 20px;
+    text-align: start;
+}
+
+.dIdentify {
+    text-align: justify;
+    margin-left: 55px;
+    margin-right: 20px;
+}
+
+.ddamage1 {
+    margin-top: 20px;
+    text-align: start;
+}
+
+.ddamage {
+    text-align: justify;
+    margin-left: 55px;
+    margin-right: 20px;
+}
+
+.dPhysical1 {
+    margin-top: 20px;
+    text-align: start;
+}
+
+.dPhysical {
+    text-align: justify;
+    margin-left: 55px;
+    margin-right: 20px;
+}
+
+.dChemical1 {
+    margin-top: 20px;
+    text-align: start;
+}
+
+.dChemical {
+    text-align: justify;
+    margin-left: 55px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* ================= Details Pests ======================= */
+
+#detailPestandDisease {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 9px;
+    border-radius: 5px;
+    background-color: #D5F5E3;
+}
+
+.pestTitle {
+    font-size: 25px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#backButton {
+    color: #03441f;
+    cursor: pointer;
+    width: 50px;
+    padding: 3px;
+    font-weight: 700;
+    border-radius: 4px;
+    display: none;
+}
+
+/* ================ Display Disease ========================= */
+
+#detailDisease {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 9px;
+    border-radius: 5px;
+    background-color: #D5F5E3;
+}
+
+.diseaseTitle {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#backButton {
+    background-color: #D5F5E3;
+    cursor: pointer;
+    width: 50px;
+    padding: 5px;
+    font-weight: 700;
+    margin-left: 25px;
+    border-radius: 4px;
+    display: none;
+}
+
+.detailPestDiv2 {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 40px;
+    background-color: white;
+}
+
+.detailPestDiv3 {
+    display: flex;
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    background-color: white;
+    padding: 8px;
+    overflow-x: scroll;
+}
+
+.div_ {
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    width: 80px;
+    background-color: #D5F5E3;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.icons2 {
+    width: 60px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.titles2 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: -1px;
+    padding: 2px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.instruc {
+    margin-top: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ================== Alert Message ================================ */
+
+.alert {
+    background-color: #eee;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    justify-self: center;
+    margin-top: 22rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: none;
+}
+
+.successUpload {
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.okayButton {
+    background-color: #03441f;
+    padding: 8px;
+    margin-top: 20px;
+    font-weight: 300;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 120px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* ================ Progress Bar ============================== */
+
+.uploadBar {
+    width: 500px;
+    background-color: #eee;
+    height: 200px;
+    position: absolute;
+    border-radius: 5px;
+    justify-self: center;
+    margin-top: 20rem;
+    display: none;
+}
+
+.bar {
+    height: 30px;
+    width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: #ccc;
+}
+
+.progress {
+    background-color: #00c200;
+    height: 100%;
+    width: 5%;
+}
+
+.textUpload {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 760;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 40px;
+}
+
+.percentage {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ======================= Details Data ============================== */
+
+#Pestdisplay {
+    background-color: #D5F5E3;
+    border-radius: 5px;
+    position: absolute;
+    justify-self: center;
+    border: 2px black solid;
+    width: 750px;
+    height: 630px;
+    margin-top: 20px;
+    display: none;
+    overflow-y: scroll;
+}
+
+.detailDiv1 {
+    border: 1px solid black;
+    gap: 60px;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+}
+
+.pestsDiv4 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    margin-right: 70px
+}
+
+.pests-list {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    overflow-x: scroll;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.pestIcon {
+    height: 60px;
+    width: 78px;
+    border-radius: 5px;
+}
+
+.pestItem {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: #D5F5E3;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.pestTitle {
+    font-size: 25px;
+    width: auto;
+    margin-top: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.qPest {
+    margin-left: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.diseaseDiv4 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    margin-right: 70px
+}
+
+.disease-list {
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    overflow-x: scroll;
+    gap: 6px;
+    border-radius: 5px;
+}
+
+.diseaseIcon {
+    height: 60px;
+    width: 78px;
+    border-radius: 5px;
+}
+
+.diseaseItem {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: #D5F5E3;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.diseaseTitle {
+    font-size: 12px;
+    width: auto;
+    margin-top: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.qDisease {
+    margin-left: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.c2 {
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.c1 {
+    margin-left: 80px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.c3 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dQuick {
+    margin-top: 3rem;
+    margin-left: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.detailDiv2 {
+    border: 1px solid black;
+    gap: 60px;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: flex;
+}
+
+.detailDiv3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    text-align: start;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.dTitle {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.divImg {
+    display: flex;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.divImg2 {
+    width: 50%;
+    display: flex;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 8px;
+}
+
+.dDescrip {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 7px;
+    text-align: center;
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dImage {
+    height: 250px;
+    width: 350px;
+    border-radius: 10px;
+    border: 3px solid rgb(30, 59, 37);
+}
+
+.dImage2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.dCateg {
+    display: flex;
+    margin-left: 120px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dGrow {
+    color: black;
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: justify;
+    padding-left: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dGrow1 {
+    margin-left: 15px;
+    color: black;
+}
+
+.dPlant {
+    color: black;
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: justify;
+    padding-left: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dPlant1 {
+    margin-left: 15px;
+    color: black;
+}
+
+.dFeed {
+    color: black;
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: justify;
+    padding-left: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dFeed1 {
+    margin-left: 15px;
+    color: black;
+}
+
+.dHarv {
+    color: black;
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: justify;
+    padding-left: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dHarv1 {
+    margin-left: 15px;
+    color: black;
+}
+
+.dGrow {
+    color: black;
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: justify;
+    padding-left: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dGrow1 {
+    margin-left: 15px;
+    color: black;
+}
+
+.dStore {
+    color: black;
+    font-size: 16px;
+    margin-left: 15px;
+    text-align: justify;
+    padding-left: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dStore1 {
+    margin-left: 15px;
+    color: black;
+}
+
+/* ========================== Delete Pests and Disease ================================== */
+
+
+.editIcon {
+    height: 24px;
+    width: 24px;
+}
+
+.deleteIcon {
+    margin-top: 3px;
+    height: 19px;
+    width: 19px;
+}
+
+.edimove {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-bottom: -22px;
+}
+
+/* ======================= table ================================ */
+
+#ContainerPestandDisease{
+    background-color: #03441f;
+    border-radius: 5px;
+    margin: 40px;
+    display: none;
+    flex-direction: column;
+}
+
+#backPD{
+    background-color: #D5F5E3;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    border-radius: 3px;
+    width: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+#detailPesDes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #D5F5E3;
+}
+
+.pestCon{
+    background-color: #03441f;
+    border-radius: 5px;
+    margin: 40px;
+    height: 100%;
+}
+
+.diseaseCon{
+    background-color: #03441f;
+    border-radius: 5px;
+    display: none;
+    margin: 40px;
+    height: 100%;
+}
+.searchp{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.searchd{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.filter{
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+#option{
+    position: relative  ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 20px;
+    gap: 5px;
+    justify-content: center;
+    background-color: white;
+    width: 120px;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    top: 125px;
+    right: 378px;
+}
+
+#dropdown li {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+#dropdown li:hover {
+    background-color: #ddd;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown2 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    top: 125px;
+    right: 378px;
+}
+
+#dropdown2 li {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+#dropdown2 li:hover {
+    background-color: #ddd;
+}
+
+#addPest {
+    background-color: rgba(1, 31, 1, 0.932);
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    width: 90px;
+    height: 40px;
+    font-weight: 700;
+    margin-right: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#addDes {
+    background-color: rgba(1, 31, 1, 0.932);
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.con2{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+#table_pest{
+    height: 380px;
+    overflow-y: scroll;
+    display: block;
+}
+
+#table_disease{
+    height: 380px;
+    overflow-y: scroll;
+    display: block;
+}
+
+#searchPes{  
+    width: 400px; 
+    height: 40px;
+    padding-left: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#searchDes{  
+    width: 400px; 
+    height: 40px;
+    padding-left: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 5px;
+    border: 1px black solid;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f0ffff;
+}
+
+.seePest{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.seePest:hover{
+    transform: scale(1.1);
+}
+.pestname{
+    width: 580px;
+    color: black;
+}
+
+.imagePest{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+.editPest:hover{
+    transform: scale(1.2);
+}
+
+.editPest{
+    width: 50px;
+    background-color: green;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.deletePest{
+    width: 50px;
+    background-color: red;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.deletePest:hover{
+    transform: scale(1.2);
+}
+
+
+.header{
+    display: flex;
+    background:     #527a63;
+    color: white;
+    border-radius: 4px;
+    width: 875px;
+    height: 30px;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.cell1{
+    padding-left: 38px;
+    font-weight: 600;
+}
+.cell2{
+    padding-left: 280px;
+    padding-right: 320px;
+    font-weight: 600;
+}
+
+.cell3{
+    font-weight: 600;
+}
+

@@ -1,0 +1,42 @@
+.sidebar1 {
+    text-align: center;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #379237;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+}
+
+/* ===================== Sales ========================================== */
+
+#sale-container{
+    background-color: #03441f;
+    margin: 40px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.h2-title{
+    color: white;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#div{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #D5F5E3;
+    height: 500px;
+    border-radius: 5px;
+}
+
+
+/* ========================== Display Sales =========================== */
+

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice Complaints</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined:opsz,wght,400,500,600,700&display=swap" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/complaints.css">
+
+</head>
+
+<body>
+    <div class="container mt-5 fluid ">
+        <h2 class="mb-4">Complaints Table</h2>
+        <table id="example" class="table table-striped table-bordered fluid" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Complaint Number</th>
+                    <th>Customer</th>
+                    <th>Email</th>
+                    <th>Complaint</th>
+                    <th>Pest Type</th>
+                    <th>Evidence</th> <!-- Image column -->
+                    <th>Status</th> <!-- Button column -->
+                    <th>Actions</th> <!-- Button column -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>John Doe</td>
+                    <td>johndoe@example.com</td>
+                    <td>Product arrived damaged</td>
+                    <td>die</td>
+                    <td><img src="assets/img/sun.png" alt="Evidence 1" width="50"></td>
+                    <td><button class="btn btn-danger">Resolved</button></td>
+                    <td>
+                        <button id="openChats" class="btn btn-success chats-btn">Chats</button>
+                        <button class="btn btn-secondary view-btn" data-complaint-number="001" data-customer="John Doe"
+                            data-email="johndoe@example.com" data-complaint="Product arrived damaged"
+                            data-evidence="assets/img/sun.png" data-status="Resolved">View</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Complaint Modal -->
+    <div id="complaintModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Complaint</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-grid">
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">description</i> <!-- Changed icon -->
+                        </div>
+                        <div class="modal-title">Complaint Number:</div>
+                        <div class="modal-value" id="modalComplaintNumber"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">account_circle</i> <!-- Changed icon -->
+                        </div>
+                        <div class="modal-title">Customer:</div>
+                        <div class="modal-value" id="modalCustomer"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">email</i>
+                        </div>
+                        <div class="modal-title">Email:</div>
+                        <div class="modal-value" id="modalEmail"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">report</i> <!-- Changed icon -->
+                        </div>
+                        <div class="modal-title">Complaint:</div>
+                        <div class="modal-value" id="modalComplaintText"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">info</i>
+                        </div>
+                        <div class="modal-title">Status:</div>
+                        <div class="modal-value" id="modalStatus"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">image</i>
+                        </div>
+                        <div class="modal-title">Evidence:</div>
+                        <div class="modal-value">
+                            <img id="modalEvidence" src="" alt="Evidence Image" width="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="chats" class="modal fade w-screen" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Complaint</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="chats.html" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTable with buttons
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'portrait',
+                        pageSize: 'A4'
+                    },
+                    {
+                        extend: 'excelHtml5'
+                    }
+                ]
+            });
+
+            // Function to open modal and set values
+            $('.view-btn').on('click', function () {
+                var complaintNumber = $(this).data('complaint-number');
+                var customer = $(this).data('customer');
+                var email = $(this).data('email');
+                var complaint = $(this).data('complaint');
+                var evidence = $(this).data('evidence');
+                var status = $(this).data('status');
+
+                $('#modalComplaintNumber').text(complaintNumber);
+                $('#modalCustomer').text(customer);
+                $('#modalEmail').text(email);
+                $('#modalComplaintText').text(complaint);
+                $('#modalEvidence').attr('src', evidence);
+                $('#modalStatus').text(status);
+
+                $('#complaintModal').modal('show');
+            });
+            document.getElementById('openChats').addEventListener('click', function () {
+            $('#chats').modal('show');
+        });
+        });
+        
+    </script>
+</body>
+
+</html>

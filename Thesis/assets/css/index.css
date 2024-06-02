@@ -1,0 +1,227 @@
+.sidebar1 {
+    text-align: center;
+    height: 100%;
+    background: #379237;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+}
+
+body {
+    justify-content: center;
+    background-color: white;
+}
+
+h1{
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+    
+}
+h3{
+    text-align: center;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    appearance: none;
+}
+ /* ---------- sidebar ---------- */
+.sidebar{
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+    grid-template-columns: 14rem 1fr;
+    margin: 0;
+    position: relative;
+    flex-direction:column;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+h3{
+    text-align: start;
+    align-items: start;
+    margin-left: 40px;
+}
+
+.sidebar a {
+    display: flex;
+    text-align: center;
+    color: #000;
+    margin-left: 1rem;
+    place-items: center;
+    height: 3.2rem;
+    transition: all .4s ease-in;
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.sidebar a:hover {
+    background-color: rgba(20, 165, 20, 0.445);
+    color: black;
+    margin-left: 1rem;
+    place-items: center;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    transition:all .4s ease;
+}
+
+.sidebar a:hover span {
+    margin-left: 1rem;
+    transition: .4s ease;
+}
+
+.sidebar a.active {
+    background: #379237;
+    color: #FFFBC1;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-left: 0;
+}
+
+.sidebar a.active::before {
+    content: '';
+    width: 1rem;
+    height: 100%;
+}
+
+img{
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ======================= Main Content ===================================== */
+
+.content{
+    background-color: #03441f;
+    margin: 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.summary{
+    display: flex;
+    gap: 76px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.ptext{
+    color: #379237;
+    font-size: 60px;
+}
+
+.ptotal{
+    font-size: 20px;
+}
+
+.saleDiv{
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    align-items: center;
+    background-color: #D5F5E3;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.headerSales{
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    background: #527a63;
+    color: white;
+}
+
+.topname{
+    margin-top: 10px;
+}
+
+.salesconDiv{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
+    height: 650px;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#container{
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.imageM{
+    margin: 0px;
+    height: 50px;
+    margin-left: 40px;
+    width: 50px;
+    border-radius: 5px;
+}
+.titleM{
+    font-size: 16px;
+    padding-left: 50px;
+    width: 200px;
+}
+
+.vendorM{
+    font-size: 16px;
+    margin: 0px;
+    width: 290px;
+    padding-left: 60px;
+}
+
+.orderNo{
+    margin: 0px;
+    font-size: 16px;
+    margin-left: 20px;
+    padding-left: 100px;
+}
+
+.productName{
+    width: 120px;
+    padding-left: 20px;
+}
+
+.name{
+    font-size: 16px;
+    margin: 0px;
+    width: 180px;
+}
+
+.vendor{
+    width: 350px;
+}
+
+.order{
+    padding-left: 70px;
+}
+

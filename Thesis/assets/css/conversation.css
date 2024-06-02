@@ -1,0 +1,193 @@
+.sidebar1 {
+    text-align: center;
+    height: 100%;
+    background: #379237;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    justify-content: center;
+    background-color: white;
+}
+
+h1{
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+    
+}
+h3{
+    text-align: center;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    appearance: none;
+}
+ /* ---------- sidebar ---------- */
+.sidebar{
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+    grid-template-columns: 14rem 1fr;
+    margin: 0;
+    position: relative;
+    flex-direction:column;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+h3{
+    text-align: start;
+    align-items: start;
+    margin-left: 40px;
+}
+
+.sidebar a {
+    display: flex;
+    text-align: center;
+    color: #000;
+    margin-left: 1rem;
+    place-items: center;
+    height: 3.2rem;
+    transition: all .4s ease-in;
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.sidebar a:hover {
+    background-color: rgba(20, 165, 20, 0.445);
+    color: black;
+    margin-left: 1rem;
+    place-items: center;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    transition:all .4s ease;
+}
+
+.sidebar a:hover span {
+    margin-left: 1rem;
+    transition: .4s ease;
+}
+
+.sidebar a.active {
+    background: #379237;
+    color: #FFFBC1;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-left: 0;
+}
+
+.sidebar a.active::before {
+    content: '';
+    width: 1rem;
+    height: 100%;
+}
+
+img{
+    width: 90px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* conversation-styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.background2 {
+    background-color: #f0f0f0;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+  /* Conversation header */
+  .conversation-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0; /* Light gray background for the header */
+  }
+  
+  /* Back button */
+  .back-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Partner details */
+  .partner-details {
+    display: flex;
+    align-items: center;
+    margin-left: 40px; /* Push partner details to the right */
+  }
+  
+  .partner-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .partner-details h3 {
+    font-size: 18px;
+  }
+  
+  /* Conversation container */
+  .conversation-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f0f0f0
+  }
+  
+  /* Individual message */
+  .message {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  /* Message bubble */
+  .message-bubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  
+  /* Received message */
+  .received {
+    justify-content: flex-start;
+  }
+  
+  /* Sent message */
+  .sent {
+    justify-content: flex-end;
+  }
+  
+  /* Received message bubble */
+  .received .message-bubble {
+    background-color: #DCF8C6; /* Light green for received messages */
+  }
+  
+  /* Sent message bubble */
+  .sent .message-bubble {
+    background-color: #B2FF59; /* Lighter green for sent messages */
+  }
+  

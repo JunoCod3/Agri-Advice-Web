@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>human interaction computer</title>
+    <link rel="stylesheet" href="/assets/css/conversation.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/assets/js/weather.js"></script>
+</head>
+
+
+<body>
+    
+    <div class="sidebar1">
+        <div class="background2">
+            <div class="conversation-header">
+                <button class="back-button" onclick="goBack()">Back</button>
+                <div class="partner-details">
+                  <img src="partner-avatar.jpg" alt="Partner Avatar">
+                  <h3>Conversation Partner</h3>
+                </div>
+              </div>
+              <div class="conversation-container">
+                <div class="message received">
+                  <div class="message-bubble">
+                    <p>Hello!</p>
+                  </div>
+                </div>
+                <div class="message sent">
+                  <div class="message-bubble">
+                    <p>Hi there!</p>
+                  </div>
+                </div>
+                <div class="message received">
+                  <div class="message-bubble">
+                    <p>How are you?</p>
+                  </div>
+                </div>
+                <!-- Add more messages as needed -->
+              </div>
+            
+              <script>
+                function goBack() {
+                  window.history.back();
+                }
+              </script>
+          </div>
+    
+        </div>
+    </div>
+  
+</body>
+</html>

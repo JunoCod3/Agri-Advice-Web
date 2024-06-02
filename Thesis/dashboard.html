@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="sidebar1">
+        <div class="content">
+            <div class="summary">
+                <div class="info-box">
+                    <p class="ptotal">Total Products</p>
+                    <p class="ptext" id="totalP">0</p>
+                </div>
+                <div class="info-box">
+                    <p class="ptotal">Total Orders</p>
+                    <p class="ptext" id="totalO">0</p>
+                </div>
+                <div class="info-box">
+                    <p class="ptotal">Total Accounts</p>
+                    <p class="ptext" id="totalA">0</p>
+                </div>
+                <div class="info-box">
+                    <p class="ptotal">Total Vendors</p>
+                    <p class="ptext" id="totalV">0</p>
+                </div>
+            </div>
+            <div class="salesconDiv">
+                <h2 class="topname">Top Selling Products</h2>
+                <div class="headerSales">
+                    <h4 class="productName">Product</h4>
+                    <h4 class="name">Name</h4>
+                    <h4 class="vendor">Vendor</h4>
+                    <h4 class="order">No. Orders</h4>
+                </div>
+                <div class="salesDiv2"></div>
+                <div id="container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="/assets/js/index.js"></script>
+
+</html>

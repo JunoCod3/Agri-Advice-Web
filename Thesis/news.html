@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/news.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div id="sidebar1" class="sidebar1">
+        <div class="bg-1">
+            <button id="showFormButton">Add News</button>
+            <div id="postsContainer"></div>
+        </div>
+    </div>
+    <div class="addNews" id="addNews">
+        <h3 class="newsT">Add News</h3>
+        <textarea style="resize: none; height: 50px;" type="text" class="gen1" id="identification"
+            placeholder="Title"></textarea>
+        <textarea style="resize: none; height: 50px;" type="text" class="gen1" id="descrip"
+            placeholder="Description"></textarea>
+
+
+        <span class="imageDa"></span>
+        <div class="imagelayout">
+            <input type="file" class="images" id="images" onchange="getImageData(event)" accept="image/*" multiple>
+            <button onclick="selectImage()" class="selecImage">Select Image</button>
+        </div>
+        <div class="exit">
+            <button id="uploadAlldata" class="uploadAlldata" onclick="uploadData()">Upload</button>
+            <button class="close" id="close">Close</button>
+        </div>
+    </div>
+    <div class="addNews1" id="addNews1">
+        <h3 class="newsT1">Edit News</h3>
+        <textarea style="resize: none; height: 50px;" type="text" class="gen1" id="identification1"
+            placeholder="Title"></textarea>
+        <textarea style="resize: none; height: 50px;" type="text" class="gen1" id="descrip1"
+            placeholder="Description"></textarea>
+
+        <span id="imageDa1" class="imageDa1"></span>
+        <div class="imagelayout1">
+            <input type="file" class="images1" id="images1" onchange="getImageData1(event)" accept="image/*" multiple>
+            <button onclick="selectImage1()" class="selecImage1">Select Image</button>
+        </div>
+        <div class="exit1">
+            <button id="uploadAlldata1" class="uploadAlldata">Update</button>
+            <button class="close" id="close1">Close</button>
+        </div>
+    </div>
+    <div class="alert" id="updateAlert">
+        <p class="successUpload">Data updated successfully!</p>
+        <button id="okayUpdate" class="okayButton">Okay</button>
+    </div>
+    <div class="alert" id="alert">
+        <p class="successUpload">Data uploaded successfully!</p>
+        <button id="okayButton" class="okayButton">Okay</button>
+    </div>
+    <div class="uploadBar" id="uploadBar">
+        <p class="textUpload">Uploading ...</p>
+        <div class="bar" id="bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="percentage" id="percentage">0%</div>
+    </div>
+    <div id="alert_delete">
+        <p class="successUpload">Are you sure you want to delete?</p>
+        <div id="" class="option">
+            <button id="yesyes">Yes</button>
+            <button id="nono">No</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="/assets/js/news.js"></script>
+
+</html>
