@@ -41,12 +41,12 @@ function retrieveDataFromFirebase() {
             edimove.classList.add("edimove");
 
             const editIcon = document.createElement('img');
-            editIcon.src = '/assets/img/restore.png';
+            editIcon.src = 'assets/img/restore.png';
             editIcon.classList.add('editIcon');
             editIcon.alt = 'Edit';
 
             const deleteIcon = document.createElement('img');
-            deleteIcon.src = '/assets/img/delete1.png';
+            deleteIcon.src = 'assets/img/delete1.png';
             deleteIcon.classList.add('deleteIcon');
             deleteIcon.alt = 'Delete';
 

@@ -101,7 +101,7 @@ function getnotVendor() {
 
                 const venImage = document.createElement('img');
                 if (ven.profileImage == null) {
-                    venImage.src = "/assets/img/person.png";
+                    venImage.src = "assets/img/person.png";
                 } else {
                     venImage.src = ven.profileImage;
                 }
@@ -123,7 +123,7 @@ function getnotVendor() {
 
                     const imageVendor = document.createElement('img');
                     if (ven.profileImage == null) {
-                        imageVendor.src = "/assets/img/person.png";
+                        imageVendor.src = "assets/img/person.png";
                     } else {
                         imageVendor.src = ven.profileImage;
                     }
@@ -225,7 +225,7 @@ function getVendor() {
 
                 const venImage = document.createElement('img');
                 if (ven.profileImage == null) {
-                    venImage.src = "/assets/img/person.png";
+                    venImage.src = "assets/img/person.png";
                 } else {
                     venImage.src = ven.profileImage;
                 }
@@ -245,7 +245,7 @@ function getVendor() {
 
                     const imageVendor = document.createElement('img');
                     if (ven.profileImage == null) {
-                        imageVendor.src = "/assets/img/person.png";
+                        imageVendor.src = "assets/img/person.png";
                     } else {
                         imageVendor.src = ven.profileImage;
                     }

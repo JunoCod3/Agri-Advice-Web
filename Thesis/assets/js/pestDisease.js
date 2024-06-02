@@ -116,12 +116,12 @@ function uploadPest() {
 //                 edimove.classList.add("edimove");
 
 //                 const editIcon = document.createElement('img');
-//                 editIcon.src = '/assets/img/edit1.png';
+//                 editIcon.src = 'assets/img/edit1.png';
 //                 editIcon.classList.add('editIcon');
 //                 editIcon.alt = 'Edit';
 
 //                 const deleteIcon = document.createElement('img');
-//                 deleteIcon.src = '/assets/img/delete1.png';
+//                 deleteIcon.src = 'assets/img/delete1.png';
 //                 deleteIcon.classList.add('deleteIcon');
 //                 deleteIcon.alt = 'Delete';
 
@@ -992,12 +992,12 @@ function uploadDisease() {
 //                 edimove.classList.add("edimove");
 
 //                 const editIcon = document.createElement('img');
-//                 editIcon.src = '/assets/img/edit1.png';
+//                 editIcon.src = 'assets/img/edit1.png';
 //                 editIcon.classList.add('editIcon');
 //                 editIcon.alt = 'Edit';
 
 //                 const deleteIcon = document.createElement('img');
-//                 deleteIcon.src = '/assets/img/delete1.png';
+//                 deleteIcon.src = 'assets/img/delete1.png';
 //                 deleteIcon.classList.add('deleteIcon');
 //                 deleteIcon.alt = 'Delete';
 
@@ -1794,7 +1794,7 @@ const getIconData = (e) => {
 
         const deselectButton = document.createElement("img");
         // Corrected src attribute assignment
-        deselectButton.src = "/assets/img/delete.png";
+        deselectButton.src = "assets/img/delete.png";
         deselectButton.className = "deselectButton";
         deselectButton.onclick = function () {
             imageData.remove();
@@ -1825,7 +1825,7 @@ const getIconData1 = (e) => {
 
         const deselectButton = document.createElement("img");
         // Corrected src attribute assignment
-        deselectButton.src = "/assets/img/delete.png";
+        deselectButton.src = "assets/img/delete.png";
         deselectButton.className = "deselectButton";
         deselectButton.onclick = function () {
             imageData.remove();
@@ -1980,7 +1980,7 @@ const getIconData3 = (e) => {
         imageData.appendChild(image);
 
         const deselectButton = document.createElement("img");
-        deselectButton.src = "/assets/img/delete.png";
+        deselectButton.src = "assets/img/delete.png";
         deselectButton.className = "deselectButton";
         deselectButton.onclick = function () {
             imageData.remove();
@@ -2017,7 +2017,7 @@ const getIconData4 = (e) => {
         imageData.appendChild(image);
 
         const deselectButton = document.createElement("img");
-        deselectButton.src = "/assets/img/delete.png";
+        deselectButton.src = "assets/img/delete.png";
         deselectButton.className = "deselectButton";
         deselectButton.onclick = function () {
             imageData.remove();
@@ -2069,7 +2069,7 @@ function getpest() {
             deletePest.classList.add('deletePest');
 
             const seePest = document.createElement('img');
-            seePest.src = "/assets/img/visible.png";
+            seePest.src = "assets/img/visible.png";
             seePest.classList.add('seePest');
 
             editPest.addEventListener('click', (event) => {
@@ -2089,7 +2089,7 @@ function getpest() {
                 imageData.appendChild(image);
 
                 const deselectButton = document.createElement('img');
-                deselectButton.src = '/assets/img/delete.png';
+                deselectButton.src = 'assets/img/delete.png';
                 deselectButton.className = 'deselectButton';
                 deselectButton.onclick = function () {
                     imageData.remove();
@@ -2417,7 +2417,7 @@ function getdisease() {
                 imageData.appendChild(image);
 
                 const deselectButton = document.createElement('img');
-                deselectButton.src = '/assets/img/delete.png';
+                deselectButton.src = 'assets/img/delete.png';
                 deselectButton.className = 'deselectButton';
                 deselectButton.onclick = function () {
                     imageData.remove();
@@ -2494,7 +2494,7 @@ function getdisease() {
             });
 
             const seePest = document.createElement('img');
-            seePest.src = "/assets/img/visible.png";
+            seePest.src = "assets/img/visible.png";
             seePest.classList.add('seePest');
 
             seePest.addEventListener('click', () => {
@@ -2690,7 +2690,7 @@ function searchDatabase(searchText) {
                     deletePest.classList.add('deletePest');
 
                     const seePest = document.createElement('img');
-                    seePest.src = "/assets/img/visible.png";
+                    seePest.src = "assets/img/visible.png";
                     seePest.classList.add('seePest');
 
                     container.appendChild(imagePest);
@@ -2858,7 +2858,7 @@ function searchDatabaseP(searchText) {
                     deletePest.classList.add('deletePest');
 
                     const seePest = document.createElement('img');
-                    seePest.src = "/assets/img/visible.png";
+                    seePest.src = "assets/img/visible.png";
                     seePest.classList.add('seePest');
 
                     deletePest.addEventListener('click', () => {

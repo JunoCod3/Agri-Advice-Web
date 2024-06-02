@@ -36,7 +36,7 @@ const getImageData = (e) => {
 
         const deselectButton = document.createElement("img");
         deselectButton.className = "deselectButton";
-        deselectButton.src = '/assets/img/delete1.png';
+        deselectButton.src = 'assets/img/delete1.png';
         deselectButton.onclick = function () {
             imageData.remove();
             URL.revokeObjectURL(image.src);
@@ -73,7 +73,7 @@ const getImageData1 = (e) => {
 
         const deselectButton = document.createElement("img");
         deselectButton.className = "deselectButton";
-        deselectButton.src = '/assets/img/delete1.png';
+        deselectButton.src = 'assets/img/delete1.png';
         deselectButton.onclick = function () {
             imageData.remove();
             URL.revokeObjectURL(image.src);
@@ -391,7 +391,7 @@ function retrieveAndDisplayData() {
 
                         const deselectButton = document.createElement("img");
                         deselectButton.className = "deselectButton";
-                        deselectButton.src = "/assets/img/delete1.png";
+                        deselectButton.src = "assets/img/delete1.png";
                         deselectButton.onclick = function () {
                             imageData.remove();
                         };
@@ -469,7 +469,7 @@ function retrieveAndDisplayData() {
             dateA.classList.add('dateA');
 
             var adminImg = document.createElement('img');
-            adminImg.src = "/assets/img/logo.png";
+            adminImg.src = "assets/img/logo.png";
             adminImg.classList.add('adminImg');
 
             postDiv7.appendChild(pageName);
