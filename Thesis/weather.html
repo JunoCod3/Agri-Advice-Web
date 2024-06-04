@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/weather.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="assets/js/weather.js"></script>
+</head>
+
+
+<body>
+    <div class="sidebar">
+        <img src="assets/img/logo.png" >
+        <a href="dashboard.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <h3>Dashboard</h3>
+        </a>
+        <a href="plant.html">
+            <span class="material-symbols-outlined">potted_plant</span>
+            <h3>Planting Guidance</h3>
+        </a>
+        <a href="pest.html">
+            <span class="material-symbols-outlined">emoji_nature</span>
+            <h3>Pest and Disease</h3>
+        </a>
+        <a href="news.html">
+            <span class="material-symbols-outlined">newspaper</span>
+            <h3>News Update</h3>
+        </a>
+        <a href="weather.html" class="active">
+            <span class="material-symbols-outlined">partly_cloudy_day</span>
+            <h3>Weather Update</h3>
+        </a>
+        <a href="market.html">
+            <span class="material-symbols-outlined">storefront</span>
+            <h3>Marketplace</h3>
+        </a>
+        <a href="vendors.html">
+            <span class="material-symbols-outlined">groups</span>
+            <h3>Vendors</h3>
+        </a>
+        <!-- <a href="sales.html">
+            <span class="material-symbols-outlined">monitoring</span>
+            <h3>Top Selling Products</h3>
+        </a>
+        <a href="message.html">
+            <span class="material-symbols-outlined">chat</span>
+            <h3>Messages</h3>
+            <span class="message_count">14</span>
+        </a> -->
+        <a href="archieve.html">
+            <span class="material-symbols-outlined">archive</span>
+            <h3>Archive</h3>
+        </a>
+        <a id="logoutButton" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            <h3>Logout</h3>
+        </a>
+    </div>
+    <div class="sidebar1">
+        <div class="bg">
+            <div class="hesoy">
+                <form id="weatherForm"> 
+                    <label class="ggs">
+                        <input placeholder="Enter City" class="putput" type="text" id="cityInput" value="Bacoor"/>
+                        <p id="infoMessage" class="info-message">Enter a city to get weather information.</p>
+                    </label>
+                </form>
+    
+                <div id="errorMessage" class="error-messages"></div>
+    
+                <div id="weatherContainer" class="contt1">
+                    <h2 id="cityInfo"></h2>
+                    <img id="currentIcon"/>
+                    <p id="currentWeatherDescription"></p>
+                    <p id="currentTemperature"></p>
+                </div>
+    
+                
+            </div>
+            <div class="hesoy2">
+                <div id="dailyForecastContainer" class="weatherwith">
+                    <h3 class="df">Daily Forecast</h3>
+                    <div id="dailyForecast" class="daily-forecastt"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

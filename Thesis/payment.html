@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice</title>
+    <link rel="stylesheet" href="assets/css/payment.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body onload="retrievePaymentAccount()">
+    <div class="sidebar1">
+        <div class="menu">
+            <h2 class="payment">Payment</h2>
+            <div class="pay-1">
+                <div class="n1" id="p-1" onclick="payment()">Transaction</div>
+                <div class="n1" id="v-1" onclick="paymentaccount()">Payment Account</div>
+            </div>
+            <div id="pay-account">
+                <h4 class="edit-pay" onclick="uploadPaymentAccount()">Edit</h4>
+                <div id="account-cointainer"></div>
+            </div>
+            <div id="pay-detail"></div>
+        </div>
+    </div>
+    <div id="conatinerPay"></div>
+    <div id="addpayAccount">
+        <h2 class="payInfo">Payment Account</h2>
+        <div id="icon_image1">
+            <div class="image">
+                <span class="metaData1"></span>
+            </div>
+            <div class="iconlayout">
+                <img src="assets/img/add.png" class="selectIcon" onclick="selectIcon1()">
+                <input type="file" class="icon1" id="icon1" onchange="getIconData1(event)" accept="image/*">
+            </div>
+        </div>
+        <div class="container1">
+            <input type="text" id="accName" placeholder="Gcash Name">
+            <input type="text" id="accNumber" placeholder="Gcash Number">
+        </div>
+        <div class="exit">
+            <button id="uploadAlldata" class="uploadAlldata" onclick="PaymentAccount()">Upload</button>
+            <button class="close" id="close1">Close</button>
+        </div>
+    </div>
+    <div class="alert" id="alert">
+        <p class="successUpload">Data uploaded successfully!</p>
+        <button id="okayButton" class="okayButton">Okay</button>
+    </div>
+    <div class="uploadBar" id="uploadBar">
+        <p class="textUpload">Uploading ...</p>
+        <div class="bar" id="bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="percentage" id="percentage">0%</div>
+    </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firestore.js"></script>
+<script src="assets/js/payment.js"></script>
+
+</html>

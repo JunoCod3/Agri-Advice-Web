@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/pest.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+
+
+<body>
+    <div class="sidebar1" id="sidebar1">
+        <div id="ContainerPestandDisease">
+            <button id="backPD">Back</button>
+            <div id="detailPesDes">sds</div>
+        </div>
+        <div class="pestCon" id="pestCon">
+            <div id="detailDisease"></div>
+            <div class="con2">
+                <div class="searchp">
+                    <button id="addPest">Add Pests</button>
+                    <input type="text" id="searchPes" placeholder="Search ...">
+                    <img id="toggleButton" src="assets/img/filter.png" class="filter">
+                    <ul id="dropdown">
+                        <li id="pestDisplay">Pest</li>
+                        <li id="diseaseDisplay">Disease</li>
+                    </ul>
+                </div>
+                <div class="header">
+                    <div class="cell1">Pest</div>
+                    <div class="cell2">Name</div>
+                    <div class="cell3">Action Bar</div>
+                </div>
+                <div id="table_pest"></div>
+                <ul id="PestList"></ul>
+            </div>
+        </div>
+        <div class="diseaseCon" id="diseaseCon">
+            <div class="con2">
+                <div class="searchp">
+                    <button id="addDes">Add Disease</button>
+                    <input type="text" id="searchDes" placeholder="Search ...">
+                    <img id="toggleButton2" src="assets/img/filter.png" class="filter">
+                    <ul id="dropdown2">
+                        <li id="pestDisplay2">Pest</li>
+                        <li id="diseaseDisplay2">Disease</li>
+                    </ul>
+                </div>
+                <div class="header">
+                    <div class="cell1">Disease</div>
+                    <div class="cell2">Name</div>
+                    <div class="cell3">Action Bar</div>
+                </div>
+                <div id="table_disease"></div>
+                <ul id="diseaseList"></ul>
+            </div>
+        </div>
+        <div class="addPest-Disease">
+            <button id="backButton">Back</button>
+            <div id="detailPestandDisease"></div>
+            <div id="pest-container">
+                <button id="showFormPests">Add Pests</button>
+                <div id="detail-display"></div>
+            </div>
+            <div id="disease-container">
+                <button id="showFormDisease">Add Disease</button>
+                <div id="detail-disease"></div>
+            </div>
+        </div>
+    </div>
+    <div class="editpesdes" id="editdes">
+        <h2 class="diseaseInfo">EditD</h2>
+        <div id="icon_image">
+            <h2 class="iconInfo">Image</h2>
+            <div class="image">
+                <span id="metaData4"></span>
+            </div>
+            <div class="iconlayout">
+                <img src="assets/img/add.png" class="selectIcon" onclick="selectIcon4()">
+                <input type="file" class="icon3" id="icon4" onchange="getIconData4(event)" accept="image/*">
+            </div>
+        </div>
+        <div class="container1">
+            <input type="text" class="genTitle" id="title4" placeholder="Title">
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="identfication4"
+                placeholder="Identification"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="damage4"
+                placeholder="Damage Prevention"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="physical4"
+                placeholder="Physical Control"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="chemical4"
+                placeholder="Chemical Control"></textarea>
+        </div>
+        <div class="exit">
+            <button id="updateDisease" class="uploadAlldata" >Update</button>
+            <button class="close" id="close4">Close</button>
+        </div>
+    </div>
+    <div class="editpesdes" id="editpesdes">
+        <h2 class="diseaseInfo">Edit</h2>
+        <div id="icon_image">
+            <h2 class="iconInfo">Image</h2>
+            <div class="image">
+                <span id="metaData3"></span>
+            </div>
+            <div class="iconlayout">
+                <img src="assets/img/add.png" class="selectIcon" onclick="selectIcon3()">
+                <input type="file" class="icon3" id="icon3" onchange="getIconData3(event)" accept="image/*">
+            </div>
+        </div>
+        <div class="container1">
+            <input type="text" class="genTitle" id="title3" placeholder="Title">
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="identfication3"
+                placeholder="Identification"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="damage3"
+                placeholder="Damage Prevention"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="physical3"
+                placeholder="Physical Control"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="chemical3"
+                placeholder="Chemical Control"></textarea>
+        </div>
+        <div class="exit">
+            <button id="updatePest" class="uploadAlldata" >Update</button>
+            <button class="close" id="close3">Close</button>
+        </div>
+    </div>
+    
+    <div class="addDisease" id="addDisease">
+        <h2 class="diseaseInfo">Add Disease</h2>
+        <div id="icon_image">
+            <h2 class="iconInfo">Image</h2>
+            <div class="image">
+                <span class="metaData"></span>
+            </div>
+            <div class="iconlayout">
+                <img src="assets/img/add.png" class="selectIcon" onclick="selectIcon()">
+                <input type="file" class="icon" id="icon" onchange="getIconData(event)" accept="image/*">
+            </div>
+        </div>
+        <div class="container1">
+            <input type="text" class="genTitle" id="title" placeholder="Title">
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="identfication"
+                placeholder="Identification"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="damage"
+                placeholder="Damage Prevention"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="physical"
+                placeholder="Physical Control"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="chemical"
+                placeholder="Chemical Control"></textarea>
+        </div>
+        <div class="exit">
+            <button id="uploadAlldata" class="uploadAlldata" onclick="uploadDisease()">Upload</button>
+            <button class="close" id="close">Close</button>
+        </div>
+    </div>
+    <div class="addPests" id="addPests">
+        <h2 class="pestInfo">Add Pests</h2>
+        <div id="icon_image1">
+            <h2 class="iconInfo">Image</h2>
+            <div class="image">
+                <span class="metaData1"></span>
+            </div>
+            <div class="iconlayout">
+                <img src="assets/img/add.png" class="selectIcon" onclick="selectIcon1()">
+                <input type="file" class="icon1" id="icon1" onchange="getIconData1(event)" accept="image/*">
+            </div>
+        </div>
+        <div class="container1">
+            <input type="text" class="genTitle" id="title1" placeholder="Title">
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="identfication1"
+                placeholder="Identification"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="damage1"
+                placeholder="Damage Prevention"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="physical1"
+                placeholder="Physical Control"></textarea>
+            <textarea style="resize: none; height: 70px;" type="text" class="gen" id="chemical1"
+                placeholder="Chemical Control"></textarea>
+        </div>
+        <div class="exit">
+            <button id="uploadAlldata" class="uploadAlldata" onclick="uploadPest()">Upload</button>
+            <button class="close" id="close1">Close</button>
+        </div>
+    </div>
+    <div class="alert" id="alert">
+        <p class="successUpload">Data uploaded successfully!</p>
+        <button id="okayButton" class="okayButton">Okay</button>
+    </div>
+    <div class="alert" id="updateAlert">
+        <p class="successUpload">Data updated successfully!</p>
+        <button id="okayUpdate" class="okayButton">Okay</button>
+    </div>
+    <div class="uploadBar" id="uploadBar">
+        <p class="textUpload">Uploading ...</p>
+        <div class="bar" id="bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="percentage" id="percentage">0%</div>
+    </div>
+    <div id="detail-pestsDisease"></div>
+    <img src="assets/img/close.png" id="xButton">
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="assets/js/pestDisease.js"></script>
+
+</html>

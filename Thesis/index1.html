@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice Admin</title>
+    <link rel="stylesheet" href="assets/css/index1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script>
+        const isLoggedIn2 = sessionStorage.getItem("isLoggedIn");
+        console.log(isLoggedIn2);
+        if (!isLoggedIn2) {
+        window.location.href = "index.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="assets/img/logo.png">
+        <a data-url="dashboard.html" class="active">
+            <span class="material-symbols-outlined">dashboard</span>
+            <h3>Dashboard</h3>
+        </a>
+        <a data-url="plant.html">
+            <span class="material-symbols-outlined">potted_plant</span>
+            <h3>Planting Guidance</h3>
+        </a>
+        <a data-url="pest.html">
+            <span class="material-symbols-outlined">emoji_nature</span>
+            <h3>Pest and Disease</h3>
+        </a>
+        <a data-url="news.html">
+            <span class="material-symbols-outlined">newspaper</span>
+            <h3>News Update</h3>
+        </a>
+        <a data-url="comp.html">
+            <span class="material-symbols-outlined">chat</span>
+            <h3>Customer Complaints</h3>
+            <span class="message_count" style="color: red;">14</span>
+        </a>
+        <a data-url="archieve.html">
+            <span class="material-symbols-outlined">chat</span>
+            <h3>Archives</h3>
+            <span class="message_count" style="color: red;">14</span>
+        </a>
+        <a href="#" id="logoutButton">
+            <span class="material-symbols-outlined">logout</span>
+            <h3>Logout</h3>
+        </a>
+    </div>
+    <div class="main-content">
+        <iframe src="about:blank" title="Content Frame" id="content-frame" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+
+    <script>
+        const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+        console.log(isLoggedIn);
+        if (!isLoggedIn) {
+        window.location.href = "index.html";
+        }
+
+        // Check if the user is logged in when the page loads
+
+        // Function to handle sidebar navigation
+        document.querySelectorAll('.sidebar a').forEach(link => {
+
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const url = this.getAttribute('data-url');
+                var urlred = url; 
+
+                const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+                // If user is not logged in, redirect to login page
+                if (isLoggedIn == "false") {
+                    console.log(isLoggedIn);
+                    window.location.href = "index.html";
+                    urlred = "index.html";
+                }
+                console.log(urlred);
+                document.getElementById('content-frame').src = urlred;
+            });
+
+        });
+        
+        // Set the default URL when the page loads
+        document.getElementById('content-frame').src = 'comp.html'; // Default URL
+
+        document.getElementById('logoutButton').addEventListener('click', function (e) {
+            e.preventDefault();
+            // Perform logout actions here (e.g., clearing session data, redirecting to login page)
+            // For this example, we'll simply redirect to a login page
+            sessionStorage.setItem("isLoggedIn", "false");
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>

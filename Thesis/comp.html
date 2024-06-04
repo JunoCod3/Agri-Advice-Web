@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Advice Complaints</title>
+    <link rel="stylesheet" href="assets/css/index1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined:opsz,wght,400,500,600,700&display=swap" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+    <!-- tailwind -->
+    <link href="https://unpkg.com/tailwindcss@%5E1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/complaints.css">
+
+
+</head>
+
+<body>
+    
+    <div class="main">
+        <br>
+        <div class="container">
+            <h2 class="mb-4">Complaints Table</h2>
+            <table id="example" class="table table-striped table-bordered fluid" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Complaint Number</th>
+                        <th>Customer</th>
+                        <th>Email</th>
+                        <th>Complaint</th>
+                        <th>Evidence</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <!-- Complaint Modal -->
+    <div id="complaintModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Complaint</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-grid">
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">description</i> <!-- Changed icon -->
+                        </div>
+                        <div class="modal-title">Complaint Number:</div>
+                        <div class="modal-value" id="modalComplaintNumber"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">account_circle</i> <!-- Changed icon -->
+                        </div>
+                        <div class="modal-title">Customer:</div>
+                        <div class="modal-value" id="modalCustomer"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">email</i>
+                        </div>
+                        <div class="modal-title">Email:</div>
+                        <div class="modal-value" id="modalEmail"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">report</i> <!-- Changed icon -->
+                        </div>
+                        <div class="modal-title">Complaint:</div>
+                        <div class="modal-value" id="modalComplaintText"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">info</i>
+                        </div>
+                        <div class="modal-title">Status:</div>
+                        <div class="modal-value" id="modalStatus"></div>
+
+                        <div class="modal-icon">
+                            <i class="material-icons-outlined">image</i>
+                        </div>
+                        <div class="modal-title">Evidence:</div>
+                        <div class="modal-value">
+                            <img id="modalEvidence" src="" alt="Evidence Image" width="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="chats" class="modal fade w-screen" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Complaint</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  
+                    <input type="hidden" id="hiddenField" value=""></input>
+                    <input type="hidden" id="hiddenFieldOrgsender" value=""></input>
+                    <input type="hidden" id="hiddenFieldOrgSenderemail" value=""></input>
+                    <input type="hidden" id="hiddenFieldOrgAdmin" value=""></input>
+                    <input type="hidden" id="hiddenFieldOrgAdminEmail" value=""></input>
+
+                    <body>
+                            <div class="w-full md:w-full bg-zinc-100">
+                                <div class="p-4 border-b border-zinc-300">Chat</div>
+                                <div class="flex flex-col h-full">
+
+                                    <div class="overflow-y-auto p-4 h-96" id="chatBody">
+
+                                    </div>
+                                    
+                                    <div class="p-4 border-t border-zinc-300">
+                                        <input type="text" placeholder="Type a message..."
+                                            class="w-full p-2 rounded-lg border border-zinc-300 focus:outline-none focus:ring focus:ring-blue-500" id="message">
+                                        <div class="flex justify-between mt-2 items-center">
+                                            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" id="resolved">Tag as Resolved</button>
+                                            <label for="fileInput" class="bg-zinc-300 px-4 py-2 rounded-lg cursor-pointer">
+                                                <input type="file" id="fileInput" multiple style="display: none;"> Attach File
+                                            </label>
+                                            <div id="attachmentPreview" class="flex gap-2"></div>
+                                            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg" id="sendmessage">Send</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                    </body>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- Include Firebase SDK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="assets/js/complaints.js"></script>
+
+
+
+</body>
+
+</html>

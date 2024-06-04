@@ -1,0 +1,234 @@
+.sidebar1 {
+    text-align: center;
+    height: 100%;
+    background: #379237;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+}
+
+/* ============================== Menu ========================================== */
+
+.menu{
+    background-color: #03441f;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#vendorContainer{
+    position: absolute;
+    width: 900px;
+    background-color: aliceblue;
+    border: green 1px solid;
+    left: 370px;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+
+}
+
+.d1{
+    display: flex;
+    align-items: start;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.d2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.vName{
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.numID{
+    font-size: 20px;
+}
+
+.typeID{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.imageVendor{
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.idImage{
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.isVendor{
+    font-size: 20px;
+}
+
+.xButton{
+    padding: 5px;
+    font-size: 12px;
+    background-color: green;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+.vendors{
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+#p-1{
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 40px;
+    font-weight: 600;
+    border: 1px solid #03441f;
+    border-radius: 5px;
+    width: 410px;
+    transform: scale(1.2);
+}
+
+#v-1{
+    background-color: #527a63;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 40px;
+    font-weight: bold;
+    border: 1px solid #03441f;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.nav-1{
+    display: flex;
+    border-radius: 5px;
+    gap: 10px;
+    width: 800px;
+}
+
+#vendor{
+    background-color: white;
+    height: 500px;
+    width: 798px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+}
+
+#notVendor{
+    background-color: white;
+    height: 500px;
+    width: 798px;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    gap: 2px;
+    display: none;
+    flex-direction: column;
+}
+
+.vendorCon{
+    padding: 10px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.vendorCon2{
+    display: flex;
+    gap: 10px;
+    height: 40px;
+}
+
+.approve{
+    padding: 10px;
+    background-color: #379237;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+
+.disable{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    height: fit-content;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 20px;
+}
+
+.notapprove{
+    padding: 10px;
+    background-color: red;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+}
+
+.Vendorname{
+    align-items: center;
+    padding: 10px;
+}
+
+.venImage{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}

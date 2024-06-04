@@ -1,0 +1,557 @@
+.sidebar1 {
+    text-align: center;
+    height: 100%;
+    background: #379237;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+}
+
+#pApprov{
+    color: #03441f;
+}
+
+/* ============================== Menu ========================================== */
+
+#mBack{
+    width: fit-content;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #D5F5E3;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.con{
+    display: flex;
+    gap: 20px;
+}
+
+.con1{
+    display: flex;
+    margin: 0px;
+}
+
+.con2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0px;
+}
+
+.mVendor{
+    margin: 0px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.mTitle{
+    margin: 0px;
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.mPrice{
+    font-size: 30px;
+}
+
+.mQyt{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.mLocation{
+    margin: 0px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.mStatus{
+    font-size: 16px;
+}
+
+#marketView{
+    background-color: #D5F5E3;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.mImage2{
+    width: 340px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.menu{
+    background-color: #03441f;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 5px;
+}
+
+#display{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+}
+
+#categ{
+    display: none;
+}
+
+.mplace{
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.n1{
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid #03441f;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: #f0ffff;
+    padding: 10px;
+}
+
+#p-1{
+    background-color: #527a63;
+    color: white;
+    margin-left: 0;
+}
+
+.n1:hover{
+    background-color: #527a63;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+#fApprove {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#pApprove {
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#pDeclined {
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+
+}
+
+
+.ApprovalProduct{
+    background-color: #03441f;
+    margin: 40px;
+    border-radius: 5px;
+}
+
+/* ============= All Product Display =============== */
+#allProducts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    background-color: white;
+    border-radius: 6px;
+    height: 400px;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+#searchProducts {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.subHeader{
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+}
+
+.productData {
+    background-color: #f0ffff ;
+    height: 50px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    border: 1px solid black;
+    margin-bottom: 1px;
+}
+
+.mImage{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background: #527a63;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23px;
+    margin-right: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+
+/* ============== Drop Down ===================== */
+
+.search-bar {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    min-width: 700;
+    border: 1px solid #03441f;
+}
+
+
+.dropdown {
+    border-radius: 50px;
+    width: 13rem;
+    border: 1px solid green;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-text {   
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content: space-between;
+    color: white;
+    padding: 0.3rem 1rem;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 115%;
+    left: .5%;
+    width: 160px;
+    display: none;
+    border-radius: 15px;
+    background-color: #f0ffff;
+    transition: max-height 0.5s;
+}
+
+#list.show {
+    max-height: 300px;
+}
+
+.dropdown-list-item {
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1rem;
+    cursor: pointer;
+    transition: margin-left 0.2s ease;
+}
+
+.dropdown-list-item:hover {
+    margin-left: 0.5rem;
+}
+
+
+
+.arrowRotate{
+    transform: rotate(360deg);
+}
+
+#searchInput{
+    width: 60%;
+    height: 40px;
+    padding-left: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 5px;
+}
+
+/* ================== For Approval =============== */
+
+#market {
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+    border-radius: 10px;
+}
+
+#market::-webkit-scrollbar {
+    width: 1;
+    /* hide the scrollbar */
+}
+
+/* ------------- PRODUCT ---------------- */
+.product {
+    background-color: #f0ffff    ;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    height: 207px;
+    cursor: pointer;
+    width: 180px;
+}
+
+
+
+.product img {
+    height: 100px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+
+.product h3 {
+    margin-top: 5px;
+    align-items: center;
+}
+
+.product p {
+    font-style: italic;
+    color: #000000;
+}
+
+/* ------------- APPROVED ---------------- */
+.approveData {
+    background-color: #f0ffff ;
+    height: 65px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+#approved {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+}
+
+#approved::-webkit-scrollbar {
+    width: 0;
+    /* hide the scrollbar */
+}
+
+
+.approveData img {
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+
+}
+
+.approveData h3 {
+    margin-inline-start: 5px;
+}
+
+.approveData p {
+    font-style: normal;
+    text-align: start;
+    color: #000000;
+}
+
+/* ----------- DECLINED ------------- */
+
+
+.declineData {
+    background-color: #f0ffff ;
+    height: 65px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+
+#declined {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-left: 5px;
+    overflow-y: scroll;
+}
+
+#declined::-webkit-scrollbar {
+    width: 0;
+    /* hide the scrollbar */
+}
+
+
+.declineData img {
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+
+}
+
+
+.declineData h3 {
+    margin-inline-start: 5px;
+}
+
+.declineData p {
+    font-style: normal;
+    color: #000000;
+}
+
+button {
+    margin-top: 5px;
+    padding: 5px 7px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-inline-start: 2px;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button.approve {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+button.decline {
+    background-color: #FF0000;
+    /* Red */
+    color: white;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+.approve-declined {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+}
+
+
+/* ---------- Add Category -------------- */
+
+#textForm{
+    background-color: #03441f;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#nCateg{
+    color: white;
+    padding-bottom: 15px;
+    text-align: center;
+}
+#addCateg{
+    display: flex;
+    flex-direction: column;
+}
+#textData{
+    width: 350px;
+    height: 40px;
+    padding-left: 15px;
+    margin-bottom: 7px;
+    border-radius: 6px;
+}
+
+#textButton{
+    width: 350px;
+    height: 40px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+#categResult {
+    margin-top: 40px;
+    background-color: white;
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+    gap: 3px;
+    font-size: 12px;
+}
+
+.categRe{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
